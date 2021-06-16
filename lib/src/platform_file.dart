@@ -13,7 +13,7 @@ class PlatformFile {
   PlatformFile.fromMap(Map data, {this.readStream})
       : this.path = data['path'],
         this.name = data['name'],
-        this.bytes = data['bytes'],
+        this.bytes = data['bytes'] as Uint8List,
         this.size = data['size'];
 
   /// The absolute path for a cached copy of this file. It can be used to create a
